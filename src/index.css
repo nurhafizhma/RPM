@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 15mm 15mm 15mm;
+  }
+  
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .page-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid #334155 !important;
+  }
+}
